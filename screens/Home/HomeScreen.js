@@ -39,7 +39,7 @@ const HomeScreen = () => {
                 </TouchableOpacity>
             </View>
             <View style={styles.Components}>
-                {/**Get */}
+                {/**Get * */}
                 <TouchableOpacity style={styles.ComponentChild3}>
                     <Text style={styles.TextChild}>Thống kê</Text>
                 </TouchableOpacity>
