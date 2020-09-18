@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Button, TouchableOpacity, ImageBackground, ActivityIndicator, Alert } from 'react-native'
+import { View, Text, StyleSheet, Button, TouchableOpacity, ImageBackground, ActivityIndicator, Alert, Dimensions } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 import { Field, reduxForm } from 'redux-form'
 import * as AuthAction from '../../../redux/auth/userAction'
@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import Colors from '../../../ultils/Colors';
 import { Input } from 'react-native-elements';
 //import Icon from 'react-native-vector-icons/FontAwesome';
+
+const { width } = Dimensions.get("window")
 
 const validate = values => {
     const errors = {}
@@ -26,14 +28,11 @@ const validate = values => {
 
 const renderField = ({ placeholder, icon, meta: { touched, error, warning }, input: { onChange, ...restInput }, }) => {
     return (
-        <View>
+        <View style={{ width }}>
             <View style={{
                 flexDirection: "row",
-                width: '96%',
                 marginBottom: 10,
                 padding: 10,
-                alignItems: 'center',
-                justifyContent: 'center'
             }}>
                 <Input placeholder={placeholder}
                     //secureTextEntry={true}
@@ -92,15 +91,6 @@ const LoginForm = (props) => {
 }
 
 const styles = StyleSheet.create({
-    // backgroundImage: {
-    //     flex: 1,
-    //     resizeMode: 'cover',
-    // },
-    // container: {
-    //     flex: 1,
-    //     alignItems: 'center',
-    //     justifyContent: 'center'
-    // },
     Login: {
         marginBottom: 20,
         borderRadius: 5,

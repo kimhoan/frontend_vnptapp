@@ -13,6 +13,7 @@ import IntroScreen from '../screens/Intro/IntroScreen';
 import FirstScreen from '../screens/First/FirstScreen';
 import ProfileScreen from '../screens/User/ProfileScreen';
 import SettingScreen from '../screens/Setting/SettingSreen';
+import AddNewScreen from '../screens/AddNew/AddNewScreen';
 
 
 // Check Stack màn hình
@@ -45,7 +46,7 @@ export const HomeStackScreen = () => (
         headerShown: false,
     })}>
         <HomeStack.Screen name='HomeScreen' component={HomeScreen} />
-        {/* <HomeStack.Screen name='DetailScreen' component={DetailScreen} /> */}
+        <HomeStack.Screen name='AddNewScreen' component={AddNewScreen} />
     </HomeStack.Navigator>
 )
 

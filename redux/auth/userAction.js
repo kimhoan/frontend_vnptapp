@@ -4,7 +4,6 @@ export const REGISTER = 'REGISTER';
 export const AUTH_LOADING = 'AUTH_LOADING';
 export const AUTH_FAILURE = 'AUTH_FAILURE';
 
-
 export const login = (email, password) => {
     return async (dispatch) => {
         dispatch({
