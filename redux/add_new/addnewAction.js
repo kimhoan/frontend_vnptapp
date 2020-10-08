@@ -12,7 +12,7 @@ export const add_new = (title, data) => {
             type: ADD_NEW_LOADING
         })
         try {
-            const response = await fetch('http://10.52.60.76:3000/api/title/posttitle', {
+            const response = await fetch('http://192.168.1.8:3000/api/title/posttitle', {
                 headers: {
                     Accept: 'application/json',
                     'Content-type': 'application/json',
