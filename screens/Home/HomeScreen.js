@@ -44,8 +44,10 @@ const HomeScreen = (props) => {
                             <Entypo name="bookmark" size={22} color="white" style={{ marginBottom: 3 }} />
                             <Text style={styles.TextChild}>Nhập liệu</Text>
                         </TouchableOpacity>
-                        {/**Update */}
-                        <TouchableOpacity style={styles.ComponentChild2}>
+                        {/**Update -> Edit Screen */}
+                        <TouchableOpacity style={styles.ComponentChild2}
+                            onPress={() => navigation.navigate('EditScreen')}
+                        >
                             <AntDesign name="edit" size={22} color="white" style={{ marginBottom: 3 }} />
                             <Text style={styles.TextChild}>Thay đổi thông tin</Text>
                         </TouchableOpacity>

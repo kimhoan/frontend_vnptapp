@@ -51,7 +51,7 @@ export const register = (name, email, password) => {
             type: AUTH_LOADING
         })
         try {
-            const response = await fetch('http://10.52.60.76:3000/api/user/register', {
+            const response = await fetch('http://192.168.1.8:3000/api/user/register', {
                 headers: {
                     Accept: 'application/json',
                     'Content-type': 'application/json'
